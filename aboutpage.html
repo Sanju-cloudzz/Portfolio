@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SS</title>
+    <link rel="stylesheet" href="START.css">
+    <link rel="stylesheet" href="menu.js">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span>S</span>anju_<span>S</span>hree.</a>
+        <nav class="navbar">
+            <a href="frontpage.html" class="active">Home</a>
+            <a href="aboutpage.html">About</a>
+            <a href="skillpage.html">Skills</a>
+            <a href="contactpage.html">Contact</a>
+        </nav>
+    </header>
+
+<div class="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About <span>Me</span></h1>
+                <p class="me"> Enthusiastic Frontend Developer with expertise in HTML, CSS, JavaScript, Core Java, and SQL. 
+                    With strong problem-solving skills honed on platforms like LeetCode, 
+                    I’m eager to contribute to dynamic teams and tackle new challenges in web development. 
+                    I specialize in creating responsive, user-friendly websites that combine innovative design with technical precision, 
+                    ensuring a seamless user experience. 
+                    Constantly learning and adapting, I’m committed to excellence and advancing in front-end development.                    
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links"onclick="opentab('education')">Education</p>
+                    <p class="tab-links"onclick="opentab('projects')">Projects</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>HTML & CSS</span><br>I learned HTML and CSS to lay the foundation for my web development journey. 
+                            Starting with HTML, I mastered structuring content, and with CSS, I brought those structures to life through styling and responsive designs. 
+                            Through hands-on projects, I developed the skills to create visually appealing and functional websites, turning design concepts into reality.</li>
+                        <li><span>Responsive Design</span><br>I excel in Responsive Design, crafting websites that adapt smoothly across devices using media queries, flexible grids, and fluid images. 
+                            My mobile-first approach ensures optimal performance and user experience, delivering versatile web solutions for all audiences.</li>
+                        <li><span>JavaScript</span><br>I have developed a solid understanding of JavaScript, mastering core concepts 
+                            such as event handling and dynamic content creation. 
+                            With experience in object-oriented programming, functions, arrays, and objects,
+                             I’ve built complex applications and written clean, efficient code to enhance web functionality and user experience.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>November 2021 - Present </span><br>PSNA College Of Engineering And
+                            Technology <br>CGPA upto 5th sem 7.88</li>
+                        <li><span>June 2019 - March 2021</span><br>Nadar Saraswathi Matric Hr. Sec. School <br>Secured 87.7%</li>
+                        <li><span> June 2018 - March 2019</span><br>R C Little Flower Girls Hr. Secondary
+                            School <br>Secured 81.2%
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="tab-contents" id="projects">
+                    <ul>
+                        <li><span>PROFESSIONAL NETWORKING PLATFORM FRONTEND
+                        </span><br>Developed a frontend page for a professional networking
+                        platform using HTML, CSS, and JavaScript, demonstrating
+                        proficiency in frontend web development and UI design
+                        principles. Implemented responsive design and interactive
+                        features to enhance user experience.
+                         </li>
+                        <li><span>FOOD DELIVERY PLATFORM</span><br>Frontend Development : Developed frontend for a food
+                            delivery site using HTML, CSS, and JavaScript, focusing on
+                            user-friendly design and interactivity.
+                            <br>Backend Integration : Collaborated on integrating a
+                            Spring Boot application for sending confirmation SMS
+                            messages upon food booking, enhancing user
+                            engagement and operational efficiency</li>
+                        <li><span> WEATHER APP DEVELOPMENT WITH REAL-TIME DATA
+                        </span><br>Frontend Development : Developed a weather app using
+                        HTML, CSS, and JavaScript, integrating the
+                        OpenWeatherMap API for real-time weather data based
+                        on user location. Designed a responsive interface for
+                        optimal user experience and accessibility
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+ </div>
+
+   <script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+   </script>
+
